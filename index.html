@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Uni3DL">
+  <meta name="keywords" content="Uni3DL: Unified Model for 3D and Language Understanding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uni3DL</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <meta name="google-site-verification" content="6lbYN1vX7A4sD8SrVniq84UEKyEUSBgxeP7d3FjuuK0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- <link rel="icon" href="./static/images/icon.png"> -->
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  </head>
+
+  <style>
+
+    #main{
+        position: relative;;
+        width: 1200px;
+    }
+
+    .box{
+        float: left;
+        padding: 15px 0 0 15px;
+/*        background-color: red;*/
+    }
+
+    .pic{
+        width: 500px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .pic img{
+        width: 500px;
+    }
+
+  </style>
+
+
+
+  <body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title"></h1> -->
+          <h2 class="title is-2 publication-title">Uni3DL:Unified Model for 3D and Language Understanding</h2>
+          <div class="is-size-5">
+            <span class="author-block">
+              <a href="https://lx709.github.io/" style="color:#008AD7;font-weight:normal;">Xiang Li<sup>*</sup></a>,</span>
+            <span class="author-block">
+                <a href="https://jianding.github.io/" style="color:#008AD7;font-weight:normal;">Jian Ding<sup>*</sup></a>
+                </a>,                
+            </span>
+
+            <span class="author-block">
+              <a href="https://pzzhang.github.io/pzzhang/" style="color:#F2A900;font-weight:normal;">Zhaoyang Chen</a>,
+            </span>
+            
+            <span class="author-block">
+              <a href="https://www.mohamed-elhoseiny.com/" style="color:#008AD7;font-weight:normal;">Mohamed Elhoseiny</a>
+            </span>
+            
+          </div>
+
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> King Abdullah University of Science and Technology</span>
+            <span class="author-block"><b style="color:#F2A900; font-weight:normal">&#x25B6 </b>Ecole Polytechnique</span>
+            <!-- <span class="author-block"><b style="color:#00A4EF; font-weight:normal">&#x25B6 </b>Microsoft Research, Redmond; </span> -->
+            <!-- <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b>Microsoft Cloud & AI </span> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution </span>
+            <!-- <span class="author-block"><sup>&#x2628;</sup>Equal Last Author</span> -->
+            <!-- <span class="author-block"><sup>&#x2691;</sup>Project Lead </span> -->
+          </div>
+
+          <br>
+         <!--  <div class="is-size-5 publication-authors">
+            <span class="author-block"><b style="color:#e08ba0; font-weight:normal"> <b>In CVPR2023</b> </b></span>
+          </div> -->
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2310.09478" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="https://github.com/Vision-CAIR/MiniGPT-4" target="_blank" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+
+
+<link rel="stylesheet" type="text/css" href="js/simple_style.css" />
+<script type="text/javascript" src="js/simple_swiper.js"></script>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="column is-full-width">
+      <div class="columns is-centered">
+        <img id="teaser" width="90%" src="images/teaser.png">
+      </div>
+      <div class="columns is-centered">
+      <!-- <h1>
+        <p style="font-family:Times New Roman"><b>Uni3DL</b>
+      </h1>                  -->
+      </div>
+    </div> 
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we present Uni3DL, a unified model for 3D and Language understanding. Distinct from existing unified vision-language models in 3D which are limited in task variety and predominantly dependent on projected multi-view images, Uni3DL operates directly on point clouds. This approach significantly expands the range of supported tasks in 3D, encompassing both vision and vision-language tasks in 3D. At the core of Uni3DL, a query transformer is designed to learn task-agnostic semantic and mask outputs by attending to 3D visual features, and a task router is employed to selectively generate task-specific outputs required for diverse tasks. With a unified architecture, our Uni3DL model enjoys seamless task decomposition and substantial parameter sharing across tasks. Uni3DL has been rigorously evaluated across diverse 3D vision-language understanding tasks, including semantic segmentation, object detection, instance segmentation, visual grounding, 3D captioning, and text-3D cross-modal retrieval. It demonstrates performance on par with or surpassing state-of-the-art (SOTA) task-specific models. We hope our benchmark and Uni3DL model will serve as a solid step to ease future research in unified models in the realm of 3D and language understanding. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <br>
+    <br>
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe width=“560” height=“315" src=“https://www.youtube.com/embed/__tftoxpBAw” title=“YouTube video player” frameborder=“0” allow=“accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share” allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!--/ Demo. -->
+    <!-- <br>
+    <br>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Demo</h2>
+      </div>
+    </div>
+
+    <div class="column is-full-width">
+      <div class="columns is-centered">
+        <img id="teaser" width="90%" src="images/demo6_AdobeExpress.gif">
+      </div>
+      <div class="columns is-centered">
+      <h1>
+        <p style="font-family:Times New Roman"><b>X-GPT: Connecting generalist X-Decoder with GPT-3</b>
+      </h1>                 
+      </div>
+    </div>
+
+    <br>
+
+    <div class="column is-full-width">
+      <div class="columns is-centered">
+        <img id="teaser" width="90%" src="images/inpaint.gif">
+      </div>
+      <div class="columns is-centered">
+      <h1>
+        <p style="font-family:Times New Roman"><b>Instruct-X-Decoder: Object-centric instructional image editing</b>
+      </h1>                 
+      </div>
+    </div> -->
+
+    <!--/ Paper video. -->
+    <br>
+    <br>
+    <!-- Paper Model. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Model</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>The Uni3DL is engineered for multifaceted 3D data tasks, including classification, retrieval, captioning, semantic and instance segmentation, as well as visual grounding. The architecture is composed of four principal modules: \ding{172} a \textbf{Text Encoder} for textual feature extraction; \ding{173} a \textbf{Point Encoder} for point feature learning; \ding{174} a \textbf{Query Transformer} Module, which is the cornerstone of the system with a sequence of cross-attention and self-attention operations between latent queries, text queries and voxel features derived from the Point Encoder; and \ding{175} a \textbf{Task Router} module, which comprises, as needed for the given task, text generation head for generating descriptive text, a grounding head for text-to-object grounding, a class head for object classification task, a mask head dedicated to segmentation, and a text-3D matching head for 3D-text cross modal matching. The text generation head functions in an autoregressive manner and predicts one token at each forward step.
+          </p>
+          <ul>
+
+          </ul>
+        </div>  
+        <img id="model" width="80%" src="images/overview.png">
+        <h3 class="subtitle has-text-centered">
+          <p style="font-family:Times New Roman"><b>Method overview of Uni3DL.</b></p>
+        </h3>   
+        <br>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">Quantative Results</h2>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="columns is-centered">
+    <img id="performance" width="50%" src="images/performance.png">
+  </div>
+</section> -->
+
+<!-- <script src="js/Underscore-min.js"></script>
+<script src="js/index.js"></script> -->
+
+
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">Qualitative Results</h2>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="columns is-centered">
+  <img id="results" width="70%" src="demos/demo.png">
+  </div> -->
+
+
+<!-- <div id="main"> -->
+  <!-- <div class="box"><div class="pic"><img src="demos/ad_1.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/web_1.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/ad_2.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/cook_2.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/describe_2.png" alt=""></div></div>
+
+
+  <div class="box"><div class="pic"><img src="demos/fact_1.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/fact_2.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/fix_2.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/fun_1.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/fun_2.png" alt=""></div></div>
+
+  <div class="box"><div class="pic"><img src="demos/logo_1.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/op_1.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/op_2.png" alt=""></div></div>
+
+  <div class="box"><div class="pic"><img src="demos/wop_1.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/people_2.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/rhyme_2.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/story_1.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/story_2.png" alt=""></div></div>
+  
+  <div class="box"><div class="pic"><img src="demos/describe_1.png" alt=""></div></div>
+  <div class="box"><div class="pic"><img src="demos/people_1.png" alt=""></div></div> -->
+
+
+<!-- </div> -->
+
+</section>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@article{li2023uni3dl,
+  title={Uni3DL: Unified Model for 3D and Language Understanding},
+  author={Xiang Li, Jian Ding, Zhaoyang Chen, and Mohamed Elhoseiny},
+  journal={arXiv:2310.09478},
+  year={2023}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>
+      This website is adapted from <a
+      href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
+                                          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+      Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</section>
+
+
+</body>
+
+</html>
