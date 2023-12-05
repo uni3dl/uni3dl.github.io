@@ -179,7 +179,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this work, we present Uni3DL, a unified model for 3D and Language understanding. Distinct from existing unified vision-language models in 3D which are limited in task variety and predominantly dependent on projected multi-view images, Uni3DL operates directly on point clouds. This approach significantly expands the range of supported tasks in 3D, encompassing both vision and vision-language tasks in 3D. At the core of Uni3DL, a query transformer is designed to learn task-agnostic semantic and mask outputs by attending to 3D visual features, and a task router is employed to selectively generate task-specific outputs required for diverse tasks. With a unified architecture, our Uni3DL model enjoys seamless task decomposition and substantial parameter sharing across tasks. Uni3DL has been rigorously evaluated across diverse 3D vision-language understanding tasks, including semantic segmentation, object detection, instance segmentation, visual grounding, 3D captioning, and text-3D cross-modal retrieval. It demonstrates performance on par with or surpassing state-of-the-art (SOTA) task-specific models. We hope our benchmark and Uni3DL model will serve as a solid step to ease future research in unified models in the realm of 3D and language understanding. 
+            We present Uni3DL, a unified model for 3D and Language understanding. Distinct from existing unified vision-language models in 3D which are limited in task variety and predominantly dependent on projected multi-view images, Uni3DL operates directly on point clouds. This approach significantly expands the range of supported tasks in 3D, encompassing both vision and vision-language tasks in 3D. At the core of Uni3DL, a query transformer is designed to learn task-agnostic semantic and mask outputs by attending to 3D visual features, and a task router is employed to selectively generate task-specific outputs required for diverse tasks. With a unified architecture, our Uni3DL model enjoys seamless task decomposition and substantial parameter sharing across tasks. Uni3DL has been rigorously evaluated across diverse 3D vision-language understanding tasks, including semantic segmentation, object detection, instance segmentation, visual grounding, 3D captioning, and text-3D cross-modal retrieval. It demonstrates performance on par with or surpassing state-of-the-art (SOTA) task-specific models. We hope our benchmark and Uni3DL model will serve as a solid step to ease future research in unified models in the realm of 3D and language understanding. 
           </p>
         </div>
       </div>
@@ -241,7 +241,7 @@
         <h2 class="title is-3">Model</h2>
         <div class="content has-text-justified">
           <p>
-            <b>The Uni3DL is engineered for multifaceted 3D data tasks, including classification, retrieval, captioning, semantic and instance segmentation, as well as visual grounding. The architecture is composed of four principal modules: \ding{172} a \textbf{Text Encoder} for textual feature extraction; \ding{173} a \textbf{Point Encoder} for point feature learning; \ding{174} a \textbf{Query Transformer} Module, which is the cornerstone of the system with a sequence of cross-attention and self-attention operations between latent queries, text queries and voxel features derived from the Point Encoder; and \ding{175} a \textbf{Task Router} module, which comprises, as needed for the given task, text generation head for generating descriptive text, a grounding head for text-to-object grounding, a class head for object classification task, a mask head dedicated to segmentation, and a text-3D matching head for 3D-text cross modal matching. The text generation head functions in an autoregressive manner and predicts one token at each forward step.
+            <b>The Uni3DL is engineered for multifaceted 3D data tasks, including classification, retrieval, captioning, semantic and instance segmentation, as well as visual grounding. The architecture is composed of four principal modules: &#9312 a <b>Text Encoder</b> for textual feature extraction; &#9313 a <b>Point Encoder</b> for point feature learning; &#9314 a <b>Query Transformer</b> Module, which is the cornerstone of the system with a sequence of cross-attention and self-attention operations between latent queries, text queries and voxel features derived from the Point Encoder; and &#9315 a <b>Task Router</b> module, which comprises, as needed for the given task, text generation head for generating descriptive text, a grounding head for text-to-object grounding, a class head for object classification task, a mask head dedicated to segmentation, and a text-3D matching head for 3D-text cross modal matching. The text generation head functions in an autoregressive manner and predicts one token at each forward step.
           </p>
           <ul>
 
@@ -267,11 +267,16 @@
   </div>
 </section>
 
-<!-- <section class="section">
-  <div class="columns is-centered">
-    <img id="performance" width="50%" src="images/performance.png">
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-six-fifths">
+    <img id="model" width="80%" src="images/fig_results.png">
+    <h3 class="subtitle has-text-centered">
+      <p style="font-family:Times New Roman"><b>Performance of our Uni3DL on different segmentation and VL tasks.</b> ‘SN’ denotes the ScanNet (v2) dataset. ‘*’ indicates the model is capable of the task without a reported metric, and ‘-’ signifies the model lacks this specific capability. The results highlighted in bold and underline denote the best and second-best outcomes, respectively, for each column. Note that Swin3D† uses extra training data (Structure3D [80]), and Parts2Words† [58] uses additional part labels. Mask-Att-Free† uses several task-specific designs, including a center regression module and position-aware components, to improve the performance.</p>
+    </h3>   
   </div>
-</section> -->
+</div>
+
 
 <!-- <script src="js/Underscore-min.js"></script>
 <script src="js/index.js"></script> -->
@@ -285,53 +290,52 @@
   </div>
 </section>
 
-<!-- <section class="section">
-  <div class="columns is-centered">
-  <img id="results" width="70%" src="demos/demo.png">
-  </div> -->
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-six-fifths">
+    <img id="model" width="80%" src="images/fig_seg.png">
+    <h3 class="subtitle has-text-centered">
+      <p style="font-family:Times New Roman"><b>3D Segmentation results on S3DIS (top) and ScanNet (bottom) datasets.</b></p>
+    </h3>   
+  </div>
+</div>
 
 
-<!-- <div id="main"> -->
-  <!-- <div class="box"><div class="pic"><img src="demos/ad_1.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/web_1.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/ad_2.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/cook_2.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/describe_2.png" alt=""></div></div>
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-six-fifths">
+    <img id="model" width="80%" src="images/fig_vg.png">
+    <h3 class="subtitle has-text-centered">
+      <p style="font-family:Times New Roman"><b>Results of grounded segmentation on ScanRefer dataset.</b></p>
+    </h3>   
+  </div>
+</div>
 
 
-  <div class="box"><div class="pic"><img src="demos/fact_1.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/fact_2.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/fix_2.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/fun_1.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/fun_2.png" alt=""></div></div>
-
-  <div class="box"><div class="pic"><img src="demos/logo_1.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/op_1.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/op_2.png" alt=""></div></div>
-
-  <div class="box"><div class="pic"><img src="demos/wop_1.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/people_2.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/rhyme_2.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/story_1.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/story_2.png" alt=""></div></div>
-  
-  <div class="box"><div class="pic"><img src="demos/describe_1.png" alt=""></div></div>
-  <div class="box"><div class="pic"><img src="demos/people_1.png" alt=""></div></div> -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-six-fifths">
+    <img id="model" width="80%" src="images/fig_text2shape.png">
+    <h3 class="subtitle has-text-centered">
+      <p style="font-family:Times New Roman"><b>Text-to-Shape Retrieval results on Text2Shape dataset, For each query sentence, we show the top-5 ranked shape, the scores of ground truth shape are marked in red.</b></p>
+    </h3>   
+  </div>
+</div>
 
 
-<!-- </div> -->
+<!-- Zero-Shot Shape classification performance on ModelNet10/ModelNet40. -->
+
 
 </section>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-@article{li2023uni3dl,
-  title={Uni3DL: Unified Model for 3D and Language Understanding},
-  author={Xiang Li, Jian Ding, Zhaoyang Chen, and Mohamed Elhoseiny},
-  journal={arXiv:2310.09478},
-  year={2023}
-}
+      @article{li2023uni3dl,
+        title={Uni3DL: Unified Model for 3D and Language Understanding},
+        author={Xiang Li, Jian Ding, Zhaoyang Chen, and Mohamed Elhoseiny},
+        journal={arXiv:2310.09478},
+        year={2023}
+      }
 </code></pre>
   </div>
 </section>
