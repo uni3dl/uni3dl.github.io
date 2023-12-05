@@ -125,7 +125,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2310.09478" target="_blank"
+                <a href="Uni3DL.pdf" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -135,7 +135,7 @@
               </span>
               
               <span class="link-block">
-                <a href="https://github.com/Vision-CAIR/MiniGPT-4" target="_blank" 
+                <a href="https://github.com/lx709/Uni3DL" target="_blank" 
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -249,7 +249,7 @@
         </div>  
         <img id="model" width="80%" src="images/overview.png">
         <h3 class="subtitle has-text-centered">
-          <p style="font-family:Times New Roman"><b>Method overview of Uni3DL.</b></p>
+          <p style="font-family:Times New Roman"><b>Figure 1. Method overview of Uni3DL.</b></p>
         </h3>   
         <br>
         <br>
@@ -270,57 +270,62 @@
 
 <div class="columns is-centered has-text-centered">
   <div class="column is-six-fifths">
-    <img id="model" width="80%" src="images/fig_results.png">
-    <h3 class="subtitle has-text-centered">
-      <p style="font-family:Times New Roman"><b>Performance of our Uni3DL on different segmentation and VL tasks.</b> ‘SN’ denotes the ScanNet (v2) dataset. ‘*’ indicates the model is capable of the task without a reported metric, and ‘-’ signifies the model lacks this specific capability. The results highlighted in bold and underline denote the best and second-best outcomes, respectively, for each column. Note that Swin3D† uses extra training data (Structure3D [80]), and Parts2Words† [58] uses additional part labels. Mask-Att-Free† uses several task-specific designs, including a center regression module and position-aware components, to improve the performance.</p>
+    <img id="model" width="60%" src="images/fig_results.png">
+    <h3 width="60%">
+      <p style="font-family:Times New Roman"><b>Table 1. Performance of our Uni3DL on different segmentation and VL tasks.</b></p>
     </h3>   
   </div>
 </div>
 
-
-<!-- <script src="js/Underscore-min.js"></script>
-<script src="js/index.js"></script> -->
 
 
 <section class="section">
+  <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3">Qualitative Results</h2>
+      <h2 class="title is-3">Qualitative Results</h2>      
+      </div>
     </div>
   </div>
+  <!--/ Results. -->    
+<div class="container is-max-desktop">
+
+  <!-- Generic Segmentation. -->
+<div class="columns is-centered">
+  <div class="column is-full-width">
+    <h2 class="title is-4">Semantic/Instance Segmentation</h2>
+    <img id="teaser" width="100%" src="images/fig_seg.png">
+    <h1>
+      <p style="font-family:Times New Roman"><b>Figure 2. 3D Segmentation results on S3DIS (top) and ScanNet (bottom) datasets.</b>
+    </h1>
+  </div>
+</div>
+
+
+<div class="columns is-centered">
+  <div class="column is-full-width">
+    <h2 class="title is-4">Referring Segmentation</h2>
+    <img id="teaser" width="100%" src="images/fig_vg.png">
+    <h1>
+      <p style="font-family:Times New Roman"><b>Figure 3. Results of grounded segmentation on ScanRefer dataset.</b>
+    </h1>
+  </div>
+</div>
+
+
+<div class="columns is-centered">
+  <div class="column is-full-width">
+    <h2 class="title is-4">Text-to-Shape Retrieval</h2>
+    <img id="teaser" width="100%" src="images/fig_text2shape.png">
+    <h1>
+      <p style="font-family:Times New Roman"><b>Figure 4. Text-to-Shape Retrieval results on Text2Shape dataset, For each query sentence, we show the top-5 ranked shape, the scores of ground truth shape are marked in red.</b>
+    </h1>
+  </div>
+</div>
+
+
+
 </section>
-
-
-<div class="columns is-centered has-text-centered">
-  <div class="column is-six-fifths">
-    <img id="model" width="80%" src="images/fig_seg.png">
-    <h3 class="subtitle has-text-centered">
-      <p style="font-family:Times New Roman"><b>3D Segmentation results on S3DIS (top) and ScanNet (bottom) datasets.</b></p>
-    </h3>   
-  </div>
-</div>
-
-
-
-<div class="columns is-centered has-text-centered">
-  <div class="column is-six-fifths">
-    <img id="model" width="80%" src="images/fig_vg.png">
-    <h3 class="subtitle has-text-centered">
-      <p style="font-family:Times New Roman"><b>Results of grounded segmentation on ScanRefer dataset.</b></p>
-    </h3>   
-  </div>
-</div>
-
-
-<div class="columns is-centered has-text-centered">
-  <div class="column is-six-fifths">
-    <img id="model" width="80%" src="images/fig_text2shape.png">
-    <h3 class="subtitle has-text-centered">
-      <p style="font-family:Times New Roman"><b>Text-to-Shape Retrieval results on Text2Shape dataset, For each query sentence, we show the top-5 ranked shape, the scores of ground truth shape are marked in red.</b></p>
-    </h3>   
-  </div>
-</div>
-
 
 <!-- Zero-Shot Shape classification performance on ModelNet10/ModelNet40. -->
 
